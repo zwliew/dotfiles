@@ -11,3 +11,4 @@ Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-6.0/lib/libclang.so.1'
