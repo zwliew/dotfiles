@@ -1,4 +1,6 @@
 # Neovim config
 
-## File location
-~/.config/nvim/init.vim
+## Installation
+```bash
+ln -s ~/dotfiles/neovim/init.vim ~/.config/nvim/init.vim
+```
