@@ -1,3 +1,4 @@
+" Dein.vim plugin manager
 if &compatible
  set nocompatible
 endif
@@ -17,5 +18,9 @@ endif
 filetype plugin indent on
 syntax enable
 
+" Enable emmet-vim only on HTML/CSS files
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+
+" Set custom indentation behaviour for specific filetypes
+autocmd FileType javascript,typescript,html,css setlocal ts=2 sw=2 sts=2 expandtab
