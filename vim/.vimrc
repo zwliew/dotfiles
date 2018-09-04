@@ -8,6 +8,7 @@ if dein#load_state('~/.cache/dein')
 
  call dein#add('~/.cache/dein')
  call dein#add('leafgarland/typescript-vim')
+ call dein#add('mattn/emmet-vim')
 
  call dein#end()
  call dein#save_state()
