@@ -25,7 +25,7 @@ let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
 " Set custom indentation behaviour for specific filetypes
-autocmd FileType javascript,typescript,html,css setlocal ts=2 sw=2 sts=2 expandtab
+autocmd FileType cpp,javascript,typescript,html,css setlocal ts=2 sw=2 sts=2 expandtab
 
 " Disable preprocessor checking for vim-vue
 "let g:vue_disable_pre_processors=1
