@@ -8,6 +8,12 @@ setlocal nu
 " Highlight search results
 setlocal hlsearch
 
+" netrw configs
+let g:netrw_liststyle = 3 " Tree-style directory listing
+let g:netrw_banner = 0 " Suppress the banner
+let g:netrw_browse_split = 4 " Open previous window when opening file
+let g:netrw_winsize = 25 " Set window width to 25% of page
+
 " Configure indentation for various file types
 " ts = tabstop (show existing tab with x spaces width)
 " sts = softabstop (treat x spaces as a tab, like when deleting)
