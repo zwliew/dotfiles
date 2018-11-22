@@ -1,8 +1,9 @@
 " Enable syntax highlighting
-syntax on
+syntax enable
 
 " Enable line numbers on a left margin
-set number
+" nu = number
+setlocal nu
 
 " Configure indentation for various file types
 " ts = tabstop (show existing tab with x spaces width)
