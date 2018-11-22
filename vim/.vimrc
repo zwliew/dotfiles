@@ -5,6 +5,9 @@ syntax enable
 " nu = number
 setlocal nu
 
+" Highlight search results
+setlocal hlsearch
+
 " Configure indentation for various file types
 " ts = tabstop (show existing tab with x spaces width)
 " sts = softabstop (treat x spaces as a tab, like when deleting)
