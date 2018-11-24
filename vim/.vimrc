@@ -8,6 +8,9 @@ setlocal nu
 " Highlight search results
 setlocal hlsearch
 
+" Enable auto indentation
+setlocal ai
+
 " netrw configs
 let g:netrw_liststyle = 3 " Tree-style directory listing
 let g:netrw_banner = 0 " Suppress the banner
