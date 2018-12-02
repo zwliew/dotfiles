@@ -11,6 +11,9 @@ setlocal hlsearch
 " Enable auto indentation
 setlocal ai
 
+" Enable smart indentation
+setlocal si
+
 " netrw configs
 let g:netrw_liststyle = 3 " Tree-style directory listing
 let g:netrw_banner = 0 " Suppress the banner
