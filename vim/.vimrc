@@ -25,4 +25,4 @@ let g:netrw_winsize = 25 " Set window width to 25% of page
 " sts = softabstop (treat x spaces as a tab, like when deleting)
 " sw = shiftwidth (when indenting with '>', use x spaces width)
 autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
-autocmd FileType javascript,html,css,cpp,c,ruby setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType eruby,scss,javascript,html,css,cpp,c,ruby setlocal ts=2 sts=2 sw=2 expandtab
