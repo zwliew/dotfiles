@@ -1,3 +1,5 @@
+if !exists('g:vscode')
+
 " Enable line numbers
 setlocal nu
 
@@ -23,3 +25,5 @@ setlocal termguicolors
 
 " Enable onedark color scheme (part 2)
 colorscheme onedark
+
+endif
