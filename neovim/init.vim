@@ -9,8 +9,9 @@ autocmd FileType cpp,c setlocal ts=2 sts=2 sw=2 expandtab
 " Enable plugins with vim-plug
 call plug#begin(stdpath('data') . '/plugged')
 
-" Enable airline status line
+" Enable airline status line (part 1)
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Enable onedark color scheme (part 1)
 Plug 'joshdick/onedark.vim'
@@ -21,9 +22,16 @@ Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 " Enable 24-bit colors
-setlocal termguicolors
+setlocal tgc
+
+" Enable airline status line (part 2)
+let g:airline#extensions#tabline#enabled=1
+let g:airline_powerline_fonts=1
+let g:airline_highlighting_cache=1
 
 " Enable onedark color scheme (part 2)
+let g:airline_theme='onedark'
+let g:onedark_terminal_italics=1
 colorscheme onedark
 
 endif
