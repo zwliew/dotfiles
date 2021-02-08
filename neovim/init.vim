@@ -1,5 +1,11 @@
 if !exists('g:vscode')
 
+" Enable CoC extensions
+let g:coc_global_extensions = ['coc-tsserver', 'coc-explorer']
+
+" Configure space-e for CoC explorer
+nmap <space>e :CocCommand explorer<CR>
+
 " Enable line numbers
 setlocal nu
 
@@ -18,6 +24,9 @@ Plug 'joshdick/onedark.vim'
 
 " Enable polyglot syntax highlighting and indentation
 Plug 'sheerun/vim-polyglot'
+
+" Enable coc
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
