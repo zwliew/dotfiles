@@ -1,10 +1,14 @@
 if !exists('g:vscode')
 
 " Enable CoC extensions
-let g:coc_global_extensions = ['coc-tsserver', 'coc-explorer']
+let g:coc_global_extensions = ['coc-tsserver', 'coc-explorer', 'coc-prettier']
 
 " Configure space-e for CoC explorer
 nmap <space>e :CocCommand explorer<CR>
+
+" Configure CoC prettier
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
 
 " Enable line numbers
 setlocal nu
