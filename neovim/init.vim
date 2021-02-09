@@ -9,6 +9,7 @@ nmap <space>e :CocCommand explorer<CR>
 " Configure CoC prettier
 vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " Configure CoC commands
 " Add `:Format` command to format current buffer.
