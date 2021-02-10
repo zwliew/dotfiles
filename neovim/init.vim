@@ -18,10 +18,10 @@ command! -nargs=0 Format :call CocAction('format')
 command! -nargs=? Fold :call CocAction('fold', <f-args>)
 
 " Enable line numbers
-setlocal nu
+set nu
 
 " Set indentation rules for file extensions
-autocmd FileType cpp,c setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType cpp,c set ts=2 sts=2 sw=2 expandtab
 
 " Enable plugins with vim-plug
 call plug#begin(stdpath('data') . '/plugged')
@@ -42,7 +42,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " Enable 24-bit colors
-setlocal tgc
+set tgc
 
 " Enable airline status line (part 2)
 let g:airline#extensions#tabline#enabled=1
