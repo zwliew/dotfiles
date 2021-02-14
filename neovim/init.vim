@@ -1,7 +1,7 @@
 if !exists('g:vscode')
 
 " Enable CoC extensions
-let g:coc_global_extensions = ['coc-tsserver', 'coc-explorer', 'coc-prettier']
+let g:coc_global_extensions = ['coc-tsserver', 'coc-explorer', 'coc-prettier', 'coc-clangd', 'coc-python']
 
 " Configure space-e for CoC explorer
 nmap <space>e :CocCommand explorer<CR>
