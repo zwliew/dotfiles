@@ -38,6 +38,9 @@ Plug 'sheerun/vim-polyglot'
 " Enable coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Enable markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
 call plug#end()
 
 " Enable 24-bit colors
