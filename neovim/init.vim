@@ -6,6 +6,12 @@ let g:coc_global_extensions = ['coc-tsserver', 'coc-explorer', 'coc-prettier', '
 " Configure space-e for CoC explorer
 nmap <space>e :CocCommand explorer<CR>
 
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
 " Configure CoC prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
