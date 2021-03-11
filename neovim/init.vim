@@ -23,7 +23,8 @@ command! -nargs=? Fold :call CocAction('fold', <f-args>)
 set mouse=a
 
 " Enable line numbers
-set nu
+set number
+set relativenumber
 
 " Set indentation rules for file extensions
 autocmd FileType cpp,c set ts=2 sts=2 sw=2 expandtab
