@@ -1,34 +1,5 @@
 if !exists('g:vscode')
 
-" Enable CoC extensions
-let g:coc_global_extensions = ['coc-tsserver', 'coc-explorer', 'coc-prettier', 'coc-clangd', 'coc-python', 'coc-eslint']
-
-" Configure space-e for CoC explorer
-nmap <space>e :CocCommand explorer<CR>
-
-" GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-" Configure CoC prettier
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-
-" Configure CoC
-" Add `:Fold` command to fold current buffer.
-command! -nargs=? Fold :call CocAction('fold', <f-args>)
-
-" Enable mouse scrolling
-set mouse=a
-
-" Enable line numbers
-set number
-set relativenumber
-
-" Set indentation rules for file extensions
-autocmd FileType cpp,c set ts=2 sts=2 sw=2 expandtab
-
 " Enable plugins with vim-plug
 call plug#begin(stdpath('data') . '/plugged')
 
@@ -45,13 +16,55 @@ Plug 'sheerun/vim-polyglot'
 " Enable coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Enable markdown preview
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-
 call plug#end()
 
+" Configure CoC
+" Enable CoC extensions
+let g:coc_global_extensions = ['coc-tsserver', 'coc-explorer', 'coc-prettier', 'coc-clangd', 'coc-pyright', 'coc-eslint']
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Add `:Fold` command to fold current buffer.
+command! -nargs=? Fold :call CocAction('fold', <f-args>)
+
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
+
+" Configure CoC prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+" Formatting selected code.
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+" Configure space-e for CoC explorer
+nmap <space>e :CocCommand explorer<CR>
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+" Recently vim can merge signcolumn and number column into one
+set signcolumn=number
+
+" Other options
+" Enable mouse scrolling
+set mouse=a
+
+" Enable line numbers
+set number
+set relativenumber
+
 " Enable 24-bit colors
-set tgc
+set termguicolors
 
 " Enable airline status line (part 2)
 let g:airline#extensions#tabline#enabled=1
