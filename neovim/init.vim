@@ -86,4 +86,7 @@ let g:airline_theme='onedark'
 let g:onedark_terminal_italics=1
 colorscheme onedark
 
+" Make all line numbers white
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+
 endif
