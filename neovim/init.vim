@@ -20,7 +20,7 @@ call plug#end()
 
 " Configure CoC
 " Enable CoC extensions
-let g:coc_global_extensions = ['coc-tsserver', 'coc-explorer', 'coc-prettier', 'coc-clangd', 'coc-pyright', 'coc-eslint', 'coc-git']
+let g:coc_global_extensions = ['coc-tsserver', 'coc-explorer', 'coc-prettier', 'coc-clangd', 'coc-pyright', 'coc-eslint', 'coc-git', 'coc-css']
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
@@ -79,7 +79,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 " Recently vim can merge signcolumn and number column into one
-set signcolumn=number
+set signcolumn=yes
 
 " Other options
 " Enable mouse scrolling
