@@ -13,6 +13,11 @@ Plug 'joshdick/onedark.vim'
 " Enable polyglot syntax highlighting and indentation
 Plug 'sheerun/vim-polyglot'
 
+" Enable FZF
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
+
 " Enable coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -72,6 +77,9 @@ function! s:show_documentation()
     execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
+
+" Configure coc-fzf
+nnoremap <silent> <space><space> :<C-u>CocFzfList<CR>
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
