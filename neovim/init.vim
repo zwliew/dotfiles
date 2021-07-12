@@ -25,7 +25,7 @@ call plug#end()
 
 " Configure CoC
 " Enable CoC extensions
-let g:coc_global_extensions = ['coc-tsserver', 'coc-explorer', 'coc-prettier', 'coc-clangd', 'coc-pyright', 'coc-eslint', 'coc-git', 'coc-css']
+let g:coc_global_extensions = ['coc-tsserver', 'coc-explorer', 'coc-prettier', 'coc-clangd', 'coc-pyright', 'coc-eslint', 'coc-git', 'coc-css', 'coc-rls']
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
