@@ -4,3 +4,4 @@ Personal configurations for various apps.
 ## Available configurations
 - [neovim](https://github.com/neovim/neovim)
 - [vim](https://github.com/vim/vim)
+- [tmux](https://github.com/tmux/tmux)
