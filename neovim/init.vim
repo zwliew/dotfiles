@@ -19,6 +19,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+" Enable Dash
+Plug 'mrjones2014/dash.nvim'
+
 call plug#end()
 
 " Configure CoC
