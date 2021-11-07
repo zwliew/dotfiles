@@ -22,6 +22,9 @@ Plug 'nvim-telescope/telescope.nvim'
 " Enable Dash
 Plug 'mrjones2014/dash.nvim'
 
+" Enable VimTex
+Plug 'lervag/vimtex'
+
 call plug#end()
 
 " Configure CoC
