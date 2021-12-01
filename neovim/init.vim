@@ -29,7 +29,7 @@ call plug#end()
 
 " Configure CoC
 " Enable CoC extensions
-let g:coc_global_extensions = ['coc-explorer', 'coc-clangd', 'coc-pyright', 'coc-json', 'coc-git']
+let g:coc_global_extensions = ['coc-explorer', 'coc-clangd', 'coc-pyright', 'coc-json', 'coc-git', 'coc-rls']
 
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
