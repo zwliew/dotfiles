@@ -165,6 +165,9 @@ require'nvim-treesitter.configs'.setup {
       node_decremental = "grm",
     },
   },
+  indent = {
+    enable = true
+  },
 }
 
 -- Configure native tree-sitter sorter (part 2)
