@@ -204,6 +204,7 @@ set signcolumn=yes
 set mouse=a
 
 " Enable (relative) line numbers
+set number
 set relativenumber
 
 " Enable 24-bit colors
