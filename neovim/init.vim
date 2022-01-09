@@ -152,6 +152,19 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+-- Configure Java LSP (jdtls)
+lspconfig.jdtls.setup {
+  cmd = { 'jdtls' },
+  root_dir = function(fname)
+    return require'lspconfig'.util.root_pattern('pom.xml', 'gradle.build', '.git')(fname) or vim.fn.getcwd()
+  end,
+  on_attach = on_attach,
+  capabilities = capabilities,
+  flags = {
+    debounce_text_changes = 150,
+  }
+}
+
 -- Setup tree-sitter
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "maintained",
