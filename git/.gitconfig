@@ -1,6 +1,7 @@
 [user]
 	name = Zhao Wei Liew
 	email = zhaoweiliew@gmail.com
+	signingKey = 162EB2271CBF48F8
 
 [core]
 	editor = nvim
@@ -10,3 +11,6 @@
 
 [difftool "nvimdiff"]
 	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+
+[commit]
+	gpgSign = true
