@@ -31,4 +31,4 @@ set termguicolors
 " sts = softabstop (treat x spaces as a tab, like when deleting)
 " sw = shiftwidth (when indenting with '>', use x spaces width)
 autocmd FileType python set ts=4 sts=4 sw=4 expandtab
-autocmd FileType json,eruby,scss,javascript,html,css,cpp,c,ruby set ts=2 sts=2 sw=2 expandtab
+autocmd FileType java,json,eruby,scss,javascript,html,css,cpp,c,ruby set ts=2 sts=2 sw=2 expandtab
