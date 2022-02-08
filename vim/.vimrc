@@ -32,3 +32,11 @@ set termguicolors
 " sw = shiftwidth (when indenting with '>', use x spaces width)
 autocmd FileType python set ts=4 sts=4 sw=4 expandtab
 autocmd FileType java,json,eruby,scss,javascript,html,css,cpp,c,ruby set ts=2 sts=2 sw=2 expandtab
+
+" vim-rainbow
+let g:rainbow_active = 1
+
+" gruvbox color scheme
+let g:gruvbox_italic=1
+colorscheme gruvbox
+set bg=dark
