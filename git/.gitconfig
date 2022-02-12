@@ -5,12 +5,26 @@
 
 [core]
 	editor = nvim
+	pager = delta
 
 [diff]
 	tool = nvimdiff
+	colorMoved = default
 
 [difftool "nvimdiff"]
 	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 
 [commit]
 	gpgSign = true
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	# use n and N to move between diff sections
+	navigate = true
+	line-numbers = true
+
+[merge]
+	conflictStyle = diff3
+
