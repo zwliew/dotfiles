@@ -1,0 +1,14 @@
+name = "Zhao Wei Liew"
+downloads-dir = "/home/zwliew/_stuff/himalaya-downloads"
+
+[gmail]
+	default = true
+	email = "zhaoweiliew@gmail.com"
+	imap-host = "imap.gmail.com"
+	imap-port = 993
+	imap-login = "zhaoweiliew@gmail.com"
+	imap-passwd-cmd = "pass show email/zhaoweiliew@gmail.com"
+	smtp-host = "smtp.gmail.com"
+	smtp-port = 465
+	smtp-login = "zhaoweiliew@gmail.com"
+	smtp-passwd-cmd = "pass show email/zhaoweiliew@gmail.com"
