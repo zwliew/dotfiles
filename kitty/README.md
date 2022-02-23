@@ -1,4 +1,5 @@
-# Kitty
+# kitty
 
-## Installation
-1. Add `include path/to/this/kitty.conf` to the end of the global `kitty.conf` file.
+## Setting up kanagawa theme
+
+Remember to run `kitty +kitten themes` and set Kanagawa as the theme.
