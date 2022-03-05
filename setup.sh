@@ -27,3 +27,7 @@ ln -s $(pwd)/zsh/.zshrc ~/.zshrc
 # kitty terminal
 mkdir -p ~/.config/kitty/themes
 ln -s $(pwd)/kitty/kanagawa.conf ~/.config/kitty/themes/kanagawa.conf
+
+# ssh
+mkdir -p ~/.ssh
+ln -s $(pwd)/ssh/config ~/.ssh/config
