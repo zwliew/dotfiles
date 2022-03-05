@@ -24,6 +24,9 @@ ln -sf $(pwd)/fish/config.fish ~/.config/fish/config.fish
 # zsh shell
 ln -sf $(pwd)/zsh/.zshrc ~/.zshrc
 
+# bash shell
+ln -sf $(pwd)/bash/.bashrc ~/.bashrc
+
 # kitty terminal
 mkdir -p ~/.config/kitty/themes
 ln -sf $(pwd)/kitty/kanagawa.conf ~/.config/kitty/themes/kanagawa.conf
