@@ -19,7 +19,9 @@ ln -sf $(pwd)/himalaya/config.toml ~/.config/himalaya/config.toml
 
 # fish shell
 mkdir -p ~/.config/fish
+mkdir -p ~/.config/fish/conf.d
 ln -sf $(pwd)/fish/config.fish ~/.config/fish/config.fish
+ln -sf $(pwd)/fish/kanagawa.fish ~/.config/fish/conf.d/kanagawa.fish
 
 # zsh shell
 ln -sf $(pwd)/zsh/.zshrc ~/.zshrc
