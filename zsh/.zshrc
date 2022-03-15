@@ -7,3 +7,5 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 eval "$(zoxide init zsh)"
+
+eval "$(opam env)"
