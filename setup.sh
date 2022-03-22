@@ -36,3 +36,8 @@ ln -sf $(pwd)/kitty/kanagawa.conf ~/.config/kitty/themes/kanagawa.conf
 # ssh
 mkdir -p ~/.ssh
 ln -sf $(pwd)/ssh/config ~/.ssh/config
+
+# ocaml (utop)
+cd ocaml
+ln -sf $(pwd)/.ocamlinit ~/.ocamlinit
+cd -
