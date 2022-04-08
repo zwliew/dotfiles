@@ -30,8 +30,11 @@ ln -sf $(pwd)/zsh/.zshrc ~/.zshrc
 ln -sf $(pwd)/bash/.bashrc ~/.bashrc
 
 # kitty terminal
+cd kitty
 mkdir -p ~/.config/kitty/themes
-ln -sf $(pwd)/kitty/kanagawa.conf ~/.config/kitty/themes/kanagawa.conf
+ln -sf $(pwd)/kanagawa.conf ~/.config/kitty/themes/kanagawa.conf
+ln -sf $(pwd)/kitty.conf ~/.config/kitty/kitty.conf
+cd -
 
 # ssh
 mkdir -p ~/.ssh
