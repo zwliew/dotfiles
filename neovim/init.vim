@@ -13,6 +13,11 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 " Configure native tree-sitter sorter (part 1)
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+" Configure file explorer (part 1)
+Plug 'nvim-telescope/telescope-file-browser.nvim'
+
+" Configure icons (part 1)
+Plug 'kyazdani42/nvim-web-devicons'
 
 " Enable VimTex
 Plug 'lervag/vimtex'
@@ -46,6 +51,7 @@ call plug#end()
 lua << EOF
 local cmp = require'cmp'
 local lspconfig = require'lspconfig'
+local telescope = require'telescope'
 
 -- Setup nvim-cmp for autocompletion
 cmp.setup {
@@ -165,6 +171,11 @@ lspconfig.jdtls.setup {
   }
 }
 
+-- Configure icons (part 2)
+require'nvim-web-devicons'.setup {
+ default = true;
+}
+
 -- Setup tree-sitter
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "maintained",
@@ -186,8 +197,11 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 
--- Configure native tree-sitter sorter (part 2)
-require'telescope'.load_extension('fzf')
+-- Configure native tree-sitter sorter and file explorer (part 2)
+local telescope_exts = { 'fzf', 'file_browser' }
+for _, ext in ipairs(telescope_exts) do
+	telescope.load_extension(ext)
+end
 
 -- Display Git information (part 2)
 require'gitsigns'.setup()
@@ -208,6 +222,7 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>fe <cmd>Telescope file_browser<cr>
 
 " Improve searches. Case insensitive unless the search query is multicase.
 set ignorecase
