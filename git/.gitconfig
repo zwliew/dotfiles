@@ -30,3 +30,5 @@
 
 [github]
 	user = zwliew
+[init]
+	defaultBranch = main
