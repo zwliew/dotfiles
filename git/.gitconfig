@@ -26,7 +26,7 @@
 	line-numbers = true
 
 [merge]
-	conflictStyle = diff3
+	conflictStyle = zdiff3
 
 [github]
 	user = zwliew
