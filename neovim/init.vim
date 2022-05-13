@@ -147,7 +147,7 @@ end
 -- Setup lspconfig
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'ocamllsp', 'hls', 'html', 'cssls', 'texlab', 'remark_ls' }
+local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'ocamllsp', 'hls', 'html', 'cssls', 'texlab', 'remark_ls', 'gopls' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
@@ -178,7 +178,6 @@ require'nvim-web-devicons'.setup {
 
 -- Setup tree-sitter
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained",
   sync_install = false,
   highlight = {
     enable = true,
