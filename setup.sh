@@ -47,3 +47,15 @@ ln -sf $(pwd)/ssh/config ~/.ssh/config
 cd ocaml
 ln -sf $(pwd)/.ocamlinit ~/.ocamlinit
 cd -
+
+# yabai tiling window manager
+mkdir -p ~/.config/yabai
+cd yabai
+ln -sf $(pwd)/yabairc ~/.config/yabai/yabairc
+cd -
+
+# skhd hotkeys
+mkdir -p ~/.config/skhd
+cd skhd
+ln -sf $(pwd)/skhdrc ~/.config/skhd/skhdrc
+cd -
