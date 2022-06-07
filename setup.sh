@@ -24,14 +24,17 @@ ln -sf $(pwd)/fish/config.fish ~/.config/fish/config.fish
 ln -sf $(pwd)/fish/kanagawa.fish ~/.config/fish/conf.d/kanagawa.fish
 
 # zsh shell
-ln -sf $(pwd)/zsh/.zshrc ~/.zshrc
+cd zsh
+ln -sf $(pwd)/.zshrc ~/.zshrc
+ln -sf $(pwd)/.zprofile ~/.zprofile
+cd -
 
 # bash shell
 ln -sf $(pwd)/bash/.bashrc ~/.bashrc
 
 # kitty terminal
-cd kitty
 mkdir -p ~/.config/kitty/themes
+cd kitty
 ln -sf $(pwd)/kanagawa.conf ~/.config/kitty/themes/kanagawa.conf
 ln -sf $(pwd)/kitty.conf ~/.config/kitty/kitty.conf
 cd -
