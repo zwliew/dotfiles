@@ -10,3 +10,4 @@ eval "$(zoxide init zsh)"
 
 eval "$(opam env)"
 
+export PATH="/Users/zwliew/.local/bin/:$PATH"
