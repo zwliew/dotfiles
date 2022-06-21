@@ -59,3 +59,8 @@ mkdir -p ~/.config/skhd
 cd skhd
 ln -sf $(pwd)/skhdrc ~/.config/skhd/skhdrc
 cd -
+
+# LunarVim
+cd lunarvim
+ln -sf $(pwd)/config.lua ~/.config/lvim/config.lua
+cd -
