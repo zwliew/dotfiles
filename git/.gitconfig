@@ -4,15 +4,15 @@
 	signingKey = 162EB2271CBF48F8
 
 [core]
-	editor = nvim
+	editor = lvim
 	pager = delta
 
 [diff]
-	tool = nvimdiff
+	tool = lvimdiff
 	colorMoved = default
 
-[difftool "nvimdiff"]
-	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+[difftool "lvimdiff"]
+	cmd = "lvim -d \"$LOCAL\" \"$REMOTE\""
 
 [commit]
 	gpgSign = true
