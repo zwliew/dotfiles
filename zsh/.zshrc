@@ -11,3 +11,4 @@ eval "$(zoxide init zsh)"
 eval "$(opam env)"
 
 export PATH="/Users/zwliew/.local/bin/:$PATH"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
