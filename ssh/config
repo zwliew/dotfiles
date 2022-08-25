@@ -8,13 +8,16 @@ Host lightsail
 Host stu sunfire
 	User zwliew
   Hostname %h.comp.nus.edu
+  ForwardAgent yes
 
 Host pe10? pe11? pe120 xcn?? xcn??? xgp?? xgp??? cgp?? amdgpu?
 	User zwliew
   Hostname %h.comp.nus.edu
 	ProxyJump stu
+  ForwardAgent yes
 
 Host soctf-pdc-0??
 	User zwliew
 	ProxyJump sunfire
+  ForwardAgent yes
 

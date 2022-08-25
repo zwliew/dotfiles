@@ -163,3 +163,6 @@ lvim.plugins = {
 -- })
 
 vim.opt.relativenumber = true
+
+-- Markdown LSP
+require 'lspconfig'.marksman.setup {}
