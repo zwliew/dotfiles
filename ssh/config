@@ -18,6 +18,6 @@ Host pe10? pe11? pe120 xcn?? xcn??? xgp?? xgp??? cgp?? amdgpu?
 
 Host soctf-pdc-0??
 	User zwliew
-	ProxyJump sunfire
+	ProxyJump stu
   ForwardAgent yes
 
