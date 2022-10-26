@@ -145,7 +145,16 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 -- Additional Plugins
 lvim.plugins = {
+  -- Color scheme
   { "rebelot/kanagawa.nvim" },
+
+  -- Scala LSP
+  {
+    "scalameta/nvim-metals",
+    config = function()
+      require("user.metals").config()
+    end,
+  },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
@@ -166,3 +175,9 @@ vim.opt.relativenumber = true
 
 -- Markdown LSP
 require 'lspconfig'.marksman.setup {}
+
+-- Scala LSP
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+  pattern = { "*.scala", "*.sbt", "*.sc" },
+  callback = function() require('user.metals').config() end,
+})

@@ -61,6 +61,8 @@ ln -sf $(pwd)/skhdrc ~/.config/skhd/skhdrc
 cd -
 
 # LunarVim
+mkdir -p ~/.config/lvim/lua/user
 cd lunarvim
 ln -sf $(pwd)/config.lua ~/.config/lvim/config.lua
+ln -sf $(pwd)/metals.lua ~/.config/lvim/lua/user/metals.lua
 cd -
