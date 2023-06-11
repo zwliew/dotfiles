@@ -5,12 +5,12 @@ Host lightsail
 	IdentityFile ~/.ssh/id_ed25519
 	LocalForward 9999 localhost:8888
 
-Host stu sunfire
+Host stu sunfire stu?
 	User zwliew
   Hostname %h.comp.nus.edu
   ForwardAgent yes
 
-Host pe10? pe11? pe120 xcn?? xcn??? xgp?? xgp??? cgp?? amdgpu?
+Host pe10? pe11? pe120 xcn?? xcn??? xgp?? xgp??? xlog? cgp?? amdgpu?
 	User zwliew
   Hostname %h.comp.nus.edu
 	ProxyJump stu
