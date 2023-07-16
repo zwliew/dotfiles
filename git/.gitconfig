@@ -4,7 +4,7 @@
 	signingKey = 162EB2271CBF48F8
 
 [core]
-	editor = lvim
+	editor = nvim
 	pager = delta
 
 [diff]
@@ -32,3 +32,9 @@
 	user = zwliew
 [init]
 	defaultBranch = main
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
