@@ -5,31 +5,35 @@
 
 [core]
 	editor = nvim
-	pager = delta
+	pager = git delta
 
 [diff]
-	tool = lvimdiff
+	tool = nvimdiff
 	colorMoved = default
 
-[difftool "lvimdiff"]
-	cmd = "lvim -d \"$LOCAL\" \"$REMOTE\""
+[difftool "nvimdiff"]
+	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 
 [commit]
 	gpgSign = true
 
 [interactive]
-	diffFilter = delta --color-only
+  diffFilter = git delta --color-only
 
 [delta]
 	# use n and N to move between diff sections
 	navigate = true
 	line-numbers = true
 
+[alias]
+	delta = !delta $(defaults read -g AppleInterfaceStyle &>/dev/null || echo --light)
+
 [merge]
 	conflictStyle = zdiff3
 
 [github]
 	user = zwliew
+
 [init]
 	defaultBranch = main
 
