@@ -1,15 +1,20 @@
 alias s="kitty +kitten ssh"
 
-export PATH="~/.local/bin/:/Users/zwliew/.local/bin/:$PATH"
-export PATH="/opt/homebrew/opt/openjdk/bin:$HOME/go/bin:$PATH"
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-export PATH="~/.ghcup/bin:/Users/zwliew/.ghcup/bin:$PATH"
+export PATH="~/.local/bin/:$PATH"
+
+export PATH="$(brew --prefix)/opt/openjdk/bin:$HOME/go/bin:$PATH"
+export PATH="$(brew --prefix)/opt/llvm/bin:$PATH"
+export PATH="$(brew --prefix)/opt/postgresql@16/bin:$PATH"
+
+export PATH="~/.ghcup/bin:$PATH"
+export PATH="$HOME/.dotnet/tools:$PATH"
+export PATH="$(brew --prefix)/opt/make/libexec/gnubin:$PATH"
 
 eval "$(starship init zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+. $(brew --prefix)/opt/asdf/libexec/asdf.sh
 
 eval "$(zoxide init zsh)"
 
