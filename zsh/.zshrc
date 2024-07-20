@@ -1,6 +1,6 @@
 alias s="kitty +kitten ssh"
 
-export PATH="~/.local/bin/:$PATH"
+export PATH="$HOME/.local/bin/:$PATH"
 
 export PATH="$(brew --prefix)/opt/openjdk/bin:$HOME/go/bin:$PATH"
 export PATH="$(brew --prefix)/opt/llvm/bin:$PATH"
