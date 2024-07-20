@@ -26,7 +26,6 @@ ln -sf "$(PWD)/fish/kanagawa.fish" "$HOME/.config/fish/conf.d/kanagawa.fish"
 # zsh shell
 cd zsh || exit
 ln -sf "$(PWD)/.zshrc" "$HOME/.zshrc"
-ln -sf "$(PWD)/.zprofile" "$HOME/.zprofile"
 cd - || exit
 
 # bash shell
@@ -58,11 +57,4 @@ cd - || exit
 mkdir -p "$HOME/.config/skhd"
 cd skhd || exit
 ln -sf "$(PWD)/skhdrc" "$HOME/.config/skhd/skhdrc"
-cd - || exit
-
-# LunarVim
-mkdir -p "$HOME/.config/lvim/lua/user"
-cd lunarvim || exit
-ln -sf "$(PWD)/config.lua" "$HOME/.config/lvim/config.lua"
-ln -sf "$(PWD)/metals.lua" "$HOME/.config/lvim/lua/user/metals.lua"
 cd - || exit
