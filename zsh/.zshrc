@@ -1,24 +1,11 @@
-alias s="kitty +kitten ssh"
-
-export PATH="$HOME/.local/bin/:$PATH"
-
-export PATH="$(brew --prefix)/opt/openjdk/bin:$HOME/go/bin:$PATH"
-export PATH="$(brew --prefix)/opt/llvm/bin:$PATH"
-export PATH="$(brew --prefix)/opt/postgresql@16/bin:$PATH"
-
-export PATH="~/.ghcup/bin:$PATH"
-export PATH="$HOME/.dotnet/tools:$PATH"
-export PATH="$(brew --prefix)/opt/make/libexec/gnubin:$PATH"
-
+eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
+eval "$(opam env)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 . $(brew --prefix)/opt/asdf/libexec/asdf.sh
-
-eval "$(zoxide init zsh)"
-
-eval "$(opam env)"
 
 rga-fzf() {
 	RG_PREFIX="rga --files-with-matches"
@@ -33,3 +20,16 @@ rga-fzf() {
 	echo "opening $file" &&
 	xdg-open "$file"
 }
+
+alias s="kitty +kitten ssh"
+
+export PATH="$HOME/.local/bin/:$PATH"
+export PATH="$HOME/.ghcup/bin:$PATH"
+export PATH="$HOME/.dotnet/tools:$PATH"
+export PATH="$(brew --prefix)/opt/openjdk/bin:$HOME/go/bin:$PATH"
+export PATH="$(brew --prefix)/opt/llvm/bin:$PATH"
+export PATH="$(brew --prefix)/opt/postgresql@16/bin:$PATH"
+export PATH="$(brew --prefix)/opt/make/libexec/gnubin:$PATH"
+
+export VCPKG="$HOME/_me/gh/vcpkg"
+export PUPPETEER_EXECUTABLE_PATH=`which chromium`
