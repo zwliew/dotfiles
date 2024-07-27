@@ -58,3 +58,9 @@ mkdir -p "$HOME/.config/skhd"
 cd skhd || exit
 ln -sf "$(PWD)/skhdrc" "$HOME/.config/skhd/skhdrc"
 cd - || exit
+
+# zellij terminal multiplexer
+mkdir -p "$HOME/.confg/zellij"
+cd zellij || exit
+ln -sf "$(PWD)/config.kdl" "$HOME/.config/zellij/config.kdl"
+cd - || exit
