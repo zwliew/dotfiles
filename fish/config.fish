@@ -1,7 +1,28 @@
+eval (/opt/homebrew/bin/brew shellenv)
+eval (opam env)
+
+fish_add_path $HOME/.local/bin
+fish_add_path $HOME/.ghcup/bin
+fish_add_path $HOME/.dotnet/tools
+fish_add_path $HOME/go/bin
+fish_add_path (brew --prefix openjdk)/bin
+fish_add_path (brew --prefix llvm)/bin
+fish_add_path (brew --prefix postgresql@16)/bin
+fish_add_path (brew --prefix make)/libexec/gnubin
+
+source $(brew --prefix asdf)/libexec/asdf.fish
+
+set -x VCPKG "$HOME/_me/gh/vcpkg"
+set -x PUPPETEER_EXECUTABLE_PATH `which chromium`
+set -x DOTNET_ROOT (asdf where dotnet-core)
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
     starship init fish | source
     zoxide init fish | source
+
+    # Set up fzf key bindings
+    fzf --fish | source
 
     alias s="kitty +kitten ssh"
 
