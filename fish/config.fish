@@ -1,5 +1,5 @@
 eval (/opt/homebrew/bin/brew shellenv)
-eval (opam env)
+eval (opam env --shell=fish)
 
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.ghcup/bin
@@ -10,7 +10,7 @@ fish_add_path (brew --prefix llvm)/bin
 fish_add_path (brew --prefix postgresql@16)/bin
 fish_add_path (brew --prefix make)/libexec/gnubin
 
-source $(brew --prefix asdf)/libexec/asdf.fish
+source (brew --prefix asdf)/libexec/asdf.fish
 
 set -x VCPKG "$HOME/_me/gh/vcpkg"
 set -x PUPPETEER_EXECUTABLE_PATH `which chromium`
