@@ -5,6 +5,7 @@ fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.ghcup/bin
 fish_add_path $HOME/.dotnet/tools
 fish_add_path $HOME/go/bin
+fish_add_path $HOME/.cargo/bin
 fish_add_path (brew --prefix openjdk)/bin
 fish_add_path (brew --prefix llvm)/bin
 fish_add_path (brew --prefix postgresql@16)/bin
@@ -15,6 +16,8 @@ source (brew --prefix asdf)/libexec/asdf.fish
 set -x VCPKG "$HOME/_me/gh/vcpkg"
 set -x PUPPETEER_EXECUTABLE_PATH `which chromium`
 set -x DOTNET_ROOT (asdf where dotnet-core)
+set -x CC (which clang)
+set -x CXX (which clang++)
 
 if status is-interactive
     # Commands to run in interactive sessions can go here

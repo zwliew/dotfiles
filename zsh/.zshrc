@@ -15,6 +15,8 @@ export PATH="$(brew --prefix make)/libexec/gnubin:$PATH"
 export VCPKG="$HOME/_me/gh/vcpkg"
 export PUPPETEER_EXECUTABLE_PATH=`which chromium`
 export DOTNET_ROOT="$(asdf where dotnet-core)"
+export CC="$(which clang)"
+export CXX="$(which clang++)"
 
 if [[ -o interactive ]]; then
 	eval "$(starship init zsh)"
