@@ -19,6 +19,8 @@ set -x DOTNET_ROOT (asdf where dotnet-core)
 set -x CC (which clang)
 set -x CXX (which clang++)
 
+source $HOME/_me/private_config.fish
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
     starship init fish | source
