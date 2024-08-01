@@ -17,10 +17,12 @@ export PUPPETEER_EXECUTABLE_PATH=`which chromium`
 export DOTNET_ROOT="$(asdf where dotnet-core)"
 export CC="$(which clang)"
 export CXX="$(which clang++)"
+export EDITOR="nvim"
 
 if [[ -o interactive ]]; then
 	eval "$(starship init zsh)"
 	eval "$(zoxide init zsh)"
+	eval "$(atuin init zsh)"
 
 	# Set up fzf key bindings and fuzzy completion
 	source <(fzf --zsh)

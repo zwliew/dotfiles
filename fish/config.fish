@@ -1,3 +1,5 @@
+set -x SHELL fish
+
 eval (/opt/homebrew/bin/brew shellenv)
 eval (opam env --shell=fish)
 
@@ -18,6 +20,7 @@ set -x PUPPETEER_EXECUTABLE_PATH `which chromium`
 set -x DOTNET_ROOT (asdf where dotnet-core)
 set -x CC (which clang)
 set -x CXX (which clang++)
+set -x EDITOR nvim
 
 source $HOME/_me/private_config.fish
 
@@ -25,6 +28,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     starship init fish | source
     zoxide init fish | source
+    atuin init fish | source
 
     # Set up fzf key bindings
     fzf --fish | source
