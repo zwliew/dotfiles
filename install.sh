@@ -21,7 +21,6 @@ ln -sf "$(PWD)/himalaya/config.toml" "$HOME/.config/himalaya/config.toml"
 mkdir -p "$HOME/.config/fish"
 mkdir -p "$HOME/.config/fish/conf.d"
 ln -sf "$(PWD)/fish/config.fish" "$HOME/.config/fish/config.fish"
-ln -sf "$(PWD)/fish/kanagawa.fish" "$HOME/.config/fish/conf.d/kanagawa.fish"
 
 # zsh shell
 cd zsh || exit
@@ -34,7 +33,6 @@ ln -sf "$(PWD)/bash/.bashrc" "$HOME/.bashrc"
 # kitty terminal
 mkdir -p "$HOME/.config/kitty/themes"
 cd kitty || exit
-ln -sf "$(PWD)/kanagawa.conf" "$HOME/.config/kitty/themes/kanagawa.conf"
 ln -sf "$(PWD)/kitty.conf" "$HOME/.config/kitty/kitty.conf"
 cd - || exit
 

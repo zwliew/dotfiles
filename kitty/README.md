@@ -1,5 +1,5 @@
 # kitty
 
-## Setting up kanagawa theme
+## Setting up theme
 
-Remember to run `kitty +kitten themes` and set Kanagawa as the theme.
+Remember to run `kitty +kitten themes` and set a theme.
