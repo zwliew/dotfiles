@@ -53,4 +53,13 @@ if status is-interactive
       echo "opening $file" && \
       open "$file"
     end
+
+    function thememe
+        set current_time (date +%H)
+        if test $current_time -ge 20
+            kitty +kitten themes Catppuccin-Mocha
+        else
+            kitty +kitten themes Catppuccin-Latte
+        end
+    end
 end

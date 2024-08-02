@@ -42,4 +42,13 @@ if [[ -o interactive ]]; then
 		echo "opening $file" &&
 		xdg-open "$file"
 	}
+
+	thememe() {
+		current_time=$(date +%H)
+		if (( current_time >= 20 )); then
+			kitty +kitten themes Catppuccin-Mocha
+		else
+			kitty +kitten themes Catppuccin-Latte
+		fi
+	}
 fi
