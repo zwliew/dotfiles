@@ -19,6 +19,25 @@ export CC="$(which clang)"
 export CXX="$(which clang++)"
 export EDITOR="nvim"
 
+# >>> coursier install directory >>>
+export PATH="$PATH:$HOME/Library/Application Support/Coursier/bin"
+# <<< coursier install directory <<<
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/zwliew/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/zwliew/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/zwliew/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/zwliew/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
 if [[ -o interactive ]]; then
 	eval "$(starship init zsh)"
 	eval "$(zoxide init zsh)"
@@ -45,7 +64,7 @@ if [[ -o interactive ]]; then
 
 	thememe() {
 		current_time=$(date +%H)
-		if (( current_time >= 20 )); then
+		if (( current_time >= 19 )); then
 			kitty +kitten themes Catppuccin-Mocha
 		else
 			kitty +kitten themes Catppuccin-Latte

@@ -56,7 +56,7 @@ if status is-interactive
 
     function thememe
         set current_time (date +%H)
-        if test $current_time -ge 20
+        if test $current_time -ge 19
             kitty +kitten themes Catppuccin-Mocha
         else
             kitty +kitten themes Catppuccin-Latte
