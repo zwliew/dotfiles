@@ -34,6 +34,7 @@ if status is-interactive
     fzf --fish | source
 
     alias s="kitty +kitten ssh"
+    alias g="git"
 
     function rga-fzf
       set RG_PREFIX 'rga --files-with-matches'

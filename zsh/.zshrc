@@ -47,6 +47,7 @@ if [[ -o interactive ]]; then
 	source <(fzf --zsh)
 
 	alias s="kitty +kitten ssh"
+	alias g="git"
 
 	rga-fzf() {
 		RG_PREFIX="rga --files-with-matches"
