@@ -47,3 +47,4 @@
 	br = "branch"
 	ci = "commit"
 	st = "status"
+	df = "diff"
