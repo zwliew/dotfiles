@@ -15,7 +15,7 @@ fish_add_path (brew --prefix make)/libexec/gnubin
 
 source (brew --prefix asdf)/libexec/asdf.fish
 
-set -x VCPKG "$HOME/_me/gh/vcpkg"
+set -x VCPKG_ROOT "$HOME/_me/gh/vcpkg"
 set -x PUPPETEER_EXECUTABLE_PATH `which chromium`
 set -x DOTNET_ROOT (asdf where dotnet-core)
 set -x CC (which clang)

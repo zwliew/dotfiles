@@ -12,7 +12,7 @@ export PATH="$(brew --prefix make)/libexec/gnubin:$PATH"
 
 . $(brew --prefix asdf)/libexec/asdf.sh
 
-export VCPKG="$HOME/_me/gh/vcpkg"
+export VCPKG_ROOT="$HOME/_me/gh/vcpkg"
 export PUPPETEER_EXECUTABLE_PATH=`which chromium`
 export DOTNET_ROOT="$(asdf where dotnet-core)"
 export CC="$(which clang)"
