@@ -13,9 +13,6 @@
 [difftool "nvimdiff"]
 	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 
-[commit]
-	gpgSign = true
-
 [interactive]
   diffFilter = git delta --color-only
 
