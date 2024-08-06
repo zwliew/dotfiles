@@ -8,6 +8,7 @@ fish_add_path $HOME/.ghcup/bin
 fish_add_path $HOME/.dotnet/tools
 fish_add_path $HOME/go/bin
 fish_add_path $HOME/.cargo/bin
+fish_add_path $HOME/_me/pip3-user-packages/bin
 fish_add_path (brew --prefix openjdk)/bin
 fish_add_path (brew --prefix llvm)/bin
 fish_add_path (brew --prefix postgresql@16)/bin
