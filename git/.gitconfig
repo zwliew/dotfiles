@@ -45,3 +45,6 @@
 	ci = "commit"
 	st = "status"
 	df = "diff"
+	bs = "bisect"
+	cl = "clone"
+	ll = "log --oneline --graph"
