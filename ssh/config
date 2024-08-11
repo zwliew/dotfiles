@@ -1,23 +1,10 @@
-Host lightsail
+Host nushackers
 	User zwliew
-	Hostname 13.251.249.191
+	Hostname 146.190.193.143
 	Port 22
 	IdentityFile ~/.ssh/id_ed25519
-	LocalForward 9999 localhost:8888
 
-Host stu sunfire stu?
+Host skeys sjump sproxy xlog? stu
 	User zwliew
-  Hostname %h.comp.nus.edu
-  ForwardAgent yes
-
-Host pe10? pe11? pe120 xcn?? xcn??? xgp?? xgp??? xlog? cgp?? amdgpu?
-	User zwliew
-  Hostname %h.comp.nus.edu
-	ProxyJump stu
-  ForwardAgent yes
-
-Host soctf-pdc-0??
-	User zwliew
-	ProxyJump stu
-  ForwardAgent yes
-
+	Hostname %h.comp.nus.edu.sg
+	ForwardAgent yes
