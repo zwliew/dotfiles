@@ -9,9 +9,6 @@ set incsearch
 set autoindent
 set smartindent
 
-" Enable ruler
-set ruler
-
 " Improve searches. Case insensitive unless the search query is multicase.
 set ignorecase
 set smartcase
@@ -25,25 +22,3 @@ set relativenumber
 
 " Enable 24-bit colors
 set termguicolors
-
-" Configure indentation for various file types
-" ts = tabstop (show existing tab with x spaces width)
-" sts = softabstop (treat x spaces as a tab, like when deleting)
-" sw = shiftwidth (when indenting with '>', use x spaces width)
-autocmd FileType python set ts=4 sts=4 sw=4 expandtab
-autocmd FileType java,json,eruby,scss,javascript,html,css,cpp,c,ruby set ts=2 sts=2 sw=2 expandtab
-
-" vim-rainbow
-let g:rainbow_active = 1
-
-" gruvbox color scheme
-let g:gruvbox_italic=1
-colorscheme gruvbox
-set bg=dark
-
-" vim hardcodes background color erase even if the terminfo file does
-" not contain bce (not to mention that libvte based terminals
-" incorrectly contain bce in their terminfo files). This causes
-" incorrect background rendering when using a color theme with a
-" background color.
-let &t_ut=''
