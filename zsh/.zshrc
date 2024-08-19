@@ -66,7 +66,7 @@ if [[ -o interactive ]]; then
 
 	thememe() {
 		current_time=$(date +%H)
-		if (( current_time <= 8 || current_time >= 19 )); then
+		if (( current_time <= 7 || current_time >= 19 )); then
 			kitty +kitten themes Catppuccin-Mocha
 		else
 			kitty +kitten themes Catppuccin-Latte
