@@ -1,11 +1,14 @@
 #!/usr/bin/env sh
 
+OS=$(uname)
+
 # tmux terminal multiplexer
 ln -sf "$PWD/tmux/.tmux.conf" "$HOME/.tmux.conf"
 
 # neovim editor
 mkdir -p "$HOME/.config/nvim"
-ln -sf "$PWD/neovim/init.vim" "$HOME/.config/nvim/init.vim"
+# ln -sf "$PWD/neovim/init.vim" "$HOME/.config/nvim/init.vim"
+ln -sf "$PWD/astronvim/"* "$HOME/.config/nvim/"
 
 # git version control
 ln -sf "$PWD/git/.gitconfig" "$HOME/.gitconfig"
@@ -45,17 +48,19 @@ cd ocaml || exit
 ln -sf "$PWD/.ocamlinit" "$HOME/.ocamlinit"
 cd - || exit
 
-# yabai tiling window manager
-mkdir -p "$HOME/.config/yabai"
-cd yabai || exit
-ln -sf "$PWD/yabairc" "$HOME/.config/yabai/yabairc"
-cd - || exit
+if [ "$OS" = "Darwin" ]; then
+	# yabai tiling window manager
+	mkdir -p "$HOME/.config/yabai"
+	cd yabai || exit
+	ln -sf "$PWD/yabairc" "$HOME/.config/yabai/yabairc"
+	cd - || exit
 
-# skhd hotkeys
-mkdir -p "$HOME/.config/skhd"
-cd skhd || exit
-ln -sf "$PWD/skhdrc" "$HOME/.config/skhd/skhdrc"
-cd - || exit
+	# skhd hotkeys
+	mkdir -p "$HOME/.config/skhd"
+	cd skhd || exit
+	ln -sf "$PWD/skhdrc" "$HOME/.config/skhd/skhdrc"
+	cd - || exit
+fi
 
 # zellij terminal multiplexer
 mkdir -p "$HOME/.confg/zellij"
