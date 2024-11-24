@@ -4,6 +4,11 @@
 ---@type LazySpec
 return {
   {
+    "f-person/auto-dark-mode.nvim",
+    opts = {},
+    init = function() require("auto-dark-mode").init() end,
+  },
+  {
     "stevearc/conform.nvim",
     opts = {},
   },

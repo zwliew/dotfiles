@@ -1,6 +1,10 @@
 set -x SHELL fish
 
-eval (/opt/homebrew/bin/brew shellenv)
+set BREW_EXISTS test -f /opt/homebrew/bin/brew
+
+if $BREW_EXISTS
+    eval (/opt/homebrew/bin/brew shellenv)
+end
 eval (opam env --shell=fish)
 
 fish_add_path $HOME/.local/bin
@@ -10,21 +14,30 @@ fish_add_path $HOME/.dotnet/tools
 fish_add_path $HOME/go/bin
 fish_add_path $HOME/.cargo/bin
 fish_add_path $HOME/_me/pip3-user-packages/bin
-fish_add_path (brew --prefix openjdk)/bin
-fish_add_path (brew --prefix llvm)/bin
-fish_add_path (brew --prefix postgresql@16)/bin
-fish_add_path (brew --prefix make)/libexec/gnubin
+if $BREW_EXISTS
+    fish_add_path (brew --prefix openjdk)/bin
+    fish_add_path (brew --prefix llvm)/bin
+    fish_add_path (brew --prefix postgresql@16)/bin
+    fish_add_path (brew --prefix make)/libexec/gnubin
 
-source (brew --prefix asdf)/libexec/asdf.fish
+    source (brew --prefix asdf)/libexec/asdf.fish
+end
 
 set -x VCPKG_ROOT "$HOME/_me/gh/vcpkg"
 set -x PUPPETEER_EXECUTABLE_PATH `which chromium`
-set -x DOTNET_ROOT (asdf where dotnet-core)
+if $BREW_EXISTS
+    set -x DOTNET_ROOT (asdf where dotnet-core)
+end
 set -x CC (which clang)
 set -x CXX (which clang++)
 set -x EDITOR nvim
 
-source $HOME/_me/private_config.fish
+fish_add_path $HOME/.bun/bin
+set -x BUN_INSTALL "$HOME/.bun"
+
+if test -f $HOME/_me/private_config.fish
+    source $HOME/_me/private_config.fish
+end
 
 if status is-interactive
     # Commands to run in interactive sessions can go here

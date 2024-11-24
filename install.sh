@@ -31,7 +31,9 @@ ln -sf "$PWD/.zshrc" "$HOME/.zshrc"
 cd - || exit
 
 # bash shell
+cd bash || exit
 ln -sf "$PWD/bash/.bashrc" "$HOME/.bashrc"
+cd - || exit
 
 # kitty terminal
 mkdir -p "$HOME/.config/kitty/themes"
