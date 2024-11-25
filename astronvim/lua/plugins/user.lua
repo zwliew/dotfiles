@@ -5,7 +5,9 @@
 return {
   {
     "f-person/auto-dark-mode.nvim",
-    opts = {},
+    opts = {
+      fallback = "light",
+    },
     init = function() require("auto-dark-mode").init() end,
   },
   {
