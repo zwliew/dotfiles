@@ -8,6 +8,7 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.completion.copilot-cmp" },
+  { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
   { import = "astrocommunity.note-taking.obsidian-nvim" },
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.cmake" },
