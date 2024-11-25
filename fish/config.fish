@@ -35,7 +35,7 @@ set -x EDITOR nvim
 fish_add_path $HOME/.bun/bin
 set -x BUN_INSTALL "$HOME/.bun"
 
-source $HOME/_me/gh/emsdk/emsdk_env.fish
+EMSDK_QUIET=1 source $HOME/_me/gh/emsdk/emsdk_env.fish
 
 if test -f $HOME/_me/private_config.fish
     source $HOME/_me/private_config.fish
