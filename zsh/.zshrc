@@ -73,4 +73,8 @@ if [[ -o interactive ]]; then
 			kitty +kitten themes Catppuccin-Latte
 		fi
 	}
+
+	function lk {
+		cd "$(walk --icons "$@")"
+	}
 fi

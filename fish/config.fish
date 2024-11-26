@@ -80,4 +80,8 @@ if status is-interactive
             kitty +kitten themes Catppuccin-Latte
         end
     end
+
+    function lk
+        set loc (walk --icons $argv); and cd $loc;
+    end
 end

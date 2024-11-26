@@ -36,4 +36,8 @@ if [[ $- == *i* ]]; then
   eval "$(atuin init bash)"
 
   eval "$(fzf --bash)"
+
+  function lk {
+    cd "$(walk --icons "$@")" || exit
+  }
 fi
