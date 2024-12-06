@@ -13,6 +13,7 @@ return {
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.cmake" },
   { import = "astrocommunity.pack.cpp" },
+  { import = "astrocommunity.pack.fish" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.haskell" },
   { import = "astrocommunity.pack.html-css" },
