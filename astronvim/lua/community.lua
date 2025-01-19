@@ -26,6 +26,7 @@ return {
   { import = "astrocommunity.pack.svelte" },
   { import = "astrocommunity.pack.zig" },
   { import = "astrocommunity.pack.typescript-all-in-one" },
+  { import = "astrocommunity.recipes.neovide" },
   { import = "astrocommunity.recipes.vscode" },
   { import = "astrocommunity.scrolling.nvim-scrollbar" },
 }

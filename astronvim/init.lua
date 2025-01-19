@@ -17,3 +17,6 @@ end
 
 require "lazy_setup"
 require "polish"
+
+vim.g.loaded_coqtail = 1
+vim.g["coqtail#supported"] = 0

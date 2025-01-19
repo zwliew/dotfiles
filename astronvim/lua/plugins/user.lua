@@ -14,4 +14,13 @@ return {
     "stevearc/conform.nvim",
     opts = {},
   },
+  {
+    "whonore/Coqtail",
+  },
+  {
+    "tomtomjhj/coq-lsp.nvim",
+    opts = {
+      mappings = true,
+    },
+  },
 }
