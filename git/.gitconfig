@@ -4,7 +4,7 @@
 
 [core]
 	editor = nvim
-	pager = git delta
+	pager = delta
 
 [diff]
 	tool = nvimdiff
@@ -14,15 +14,11 @@
 	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 
 [interactive]
-  diffFilter = git delta --color-only
+  diffFilter = delta --color-only
 
 [delta]
-	# use n and N to move between diff sections
 	navigate = true
 	line-numbers = true
-
-[alias]
-	delta = !delta $(defaults read -g AppleInterfaceStyle &>/dev/null || echo --light)
 
 [merge]
 	conflictStyle = zdiff3
