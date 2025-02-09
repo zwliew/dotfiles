@@ -19,8 +19,6 @@ if $BREW_EXISTS
     fish_add_path (brew --prefix llvm)/bin
     fish_add_path (brew --prefix postgresql@16)/bin
     fish_add_path (brew --prefix make)/libexec/gnubin
-
-    source (brew --prefix asdf)/libexec/asdf.fish
 end
 
 set -x VCPKG_ROOT "$HOME/_me/gh/vcpkg"
