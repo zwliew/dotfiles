@@ -7,6 +7,9 @@ if $BREW_EXISTS
 end
 eval (opam env --shell=fish)
 
+fish_add_path /usr/local/cuda/bin
+
+fish_add_path $HOME/.config/emacs/bin
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.ghcup/bin
 fish_add_path $HOME/.cabal/bin
