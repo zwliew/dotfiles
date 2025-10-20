@@ -36,8 +36,6 @@ set -x MANPAGER "less -R --use-color -Dd+r -Du+b"
 fish_add_path $HOME/.bun/bin
 set -x BUN_INSTALL "$HOME/.bun"
 
-EMSDK_QUIET=1 source $HOME/_me/gh/emsdk/emsdk_env.fish
-
 if test -f $HOME/_me/private_config.fish
     source $HOME/_me/private_config.fish
 end
