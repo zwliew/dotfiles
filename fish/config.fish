@@ -24,7 +24,6 @@ if $BREW_EXISTS
     fish_add_path (brew --prefix make)/libexec/gnubin
 end
 
-set -x VCPKG_ROOT "$HOME/_me/gh/vcpkg"
 set -x PUPPETEER_EXECUTABLE_PATH `which chromium`
 if $BREW_EXISTS
     set -x DOTNET_ROOT (asdf where dotnet-core)
@@ -32,6 +31,7 @@ end
 set -x CC (which clang)
 set -x CXX (which clang++)
 set -x EDITOR nvim
+set -x MANPAGER "less -R --use-color -Dd+r -Du+b"
 
 fish_add_path $HOME/.bun/bin
 set -x BUN_INSTALL "$HOME/.bun"
@@ -55,12 +55,12 @@ if status is-interactive
     alias g="git"
 
     function rga-fzf
-      set RG_PREFIX 'rga --files-with-matches'
-      if test (count $argv) -gt 1
-          set RG_PREFIX "$RG_PREFIX $argv[1..-2]"
-      end
-      set -l file $file
-      set file (
+        set RG_PREFIX 'rga --files-with-matches'
+        if test (count $argv) -gt 1
+            set RG_PREFIX "$RG_PREFIX $argv[1..-2]"
+        end
+        set -l file $file
+        set file (
           FZF_DEFAULT_COMMAND="$RG_PREFIX '$argv[-1]'" \
           fzf --sort \
               --preview='test ! -z {} && \
@@ -68,14 +68,12 @@ if status is-interactive
               --phony -q "$argv[-1]" \
               --bind "change:reload:$RG_PREFIX {q}" \
               --preview-window='50%:wrap'
-      ) && \
-      echo "opening $file" && \
-      open "$file"
+      ) && echo "opening $file" && open "$file"
     end
 
     function thememe
         set current_time (date +%H)
-        if test $current_time -le 7 -o $current_time -ge 19 
+        if test $current_time -le 7 -o $current_time -ge 19
             kitty +kitten themes Catppuccin-Mocha
         else
             kitty +kitten themes Catppuccin-Latte
@@ -83,6 +81,7 @@ if status is-interactive
     end
 
     function lk
-        set loc (walk --icons $argv); and cd $loc;
+        set loc (walk --icons $argv); and cd $loc
+
     end
 end
